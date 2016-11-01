@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+
+  <HEAD>
+    <TITLE>{{meta. title }}</TITLE>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html;charset=utf-8">
+    <META HTTP-EQUIV="refresh" CONTENT="61">
+  </HEAD>
+
+  <BODY>
+
+  <center>
+
+
+  <table border="0" cellpadding="8">
+  <tr>
+    <td><IMG src="{{ weather.icon }}.png" alt="Vejret"><br></td>
+    <td><h2><font color="blue">Scotte Pillefyr </font> <font color="gray">{{ meta.time }}</font></h2></td>
+  </tr>
+  </table>
+  <br>
+ 
+  <b>Fyr:</b> {{ scotte.tilstand_text }} {{ scotte.ydelse }}%, {{ scotte.kedel_temp }}° / {{ scotte.ref_kedel_temp }}° | 
+  <b>VVB:</b> {{ scotte.roeg_temp }}° (lader) | <b>Pumpe:</b> kører | 
+  <b>Skakt:</b> {{ scotte.skakt_temp }}° | <b>Lys:</b> {{ scotte.lys }} | <b>Alarm:</b> {{ scotte.alarm }}
+  <br>
+  <b>Pillebeholdning:</b> 47% (42 cm), sidste høje vandmærke: 2016-01-10 ved 42% 
+  <br>
+  <b>Vejr:</b> {{ weather.description }}, {{ weather.temperature }}°, {{ weather.windspeed }} m/s ({{ weather.winddirection_text}}), {{ weather.pressure }} hPa | 
+  <b>Luftfugtighed:</b> {{ weather.humidity }}%  | <b>Sol op:</b> {{ weather.sunrise }} | <b>Sol ned:</b> {{ weather.sunset }} 
+  <br>
+
+  <table border="0">
+    <tr>
+      <td><IMG src="pillefyr1.png" alt="Pillefyr sidste døgn"></td>
+      <td><IMG src="pillefyr2.png" alt="Pillefyr sidste måned"></td>
+    </tr>
+    <tr>
+      <td><IMG src="vejr_forbrug1.png" alt="Vejr og forbrug sidste døgn"></td>
+      <td><IMG src="vejr_forbrug2.png" alt="Vejr og forbrug sidste måned"></td>
+    <tr>
+  </table>
+  <br>
+
+  <b>Up:</b> {{ system.uptime }} | <b>Cpu:</b> {{ system.cpu_temperature }}° {{ system.cpu_load }} | 
+  <b>Disk:</b> {{ system.disk_usage }}% used | <b>Mem:</b> {{ system.mem_usage }}% used | 
+  <b>Net:</b> {{ system.ip_address }} on {{ system.wireless_info[0] }}, Signal: {{ system.wireless_info[1]}}%
+  <br>
+
+  <table border="0" cellpadding="8">
+    <tr>
+      <td><a href="http://oss.oetiker.ch/rrdtool/"><IMG src="rrdtool.jpg" border="0" alt="rrdtool"></a></td>
+      <td><a href="http://www.raspberrypi.org/"><IMG src="raspberrypi.jpg" border="0" alt="RaspberryPi"></a></td>
+      <td><a href="http://www.raspbian.org/"><IMG src="raspbian.jpg" border="0" alt="Raspbian"></a></td>
+      <td><a href="http://validator.w3.org/check?uri=referer"><img src="valid-html401.png" alt="Valid HTML 4.01 Transitional"></a></td>
+    </tr>
+  </table>
+  </center>
+  <a href="history.html">Se seneste år</a>
+
+  </BODY>
+
+</HTML>
