@@ -6,10 +6,10 @@ GPIO.setmode(GPIO.BCM)
 
 # Create a dictionary called pins to store the pin number, name, and pin state:
 pins = {
-   26: {'name' : 'Pillefyr', 'state' : GPIO.HIGH},
-   19: {'name' : 'Cirkulationspumpe', 'state' : GPIO.HIGH},
-   13: {'name' : 'VVB', 'state' : GPIO.HIGH},
-   6 : {'name' : 'Lampe', 'state' : GPIO.HIGH}
+   17: {'name' : 'Pillefyr', 'state' : GPIO.HIGH},
+   18: {'name' : 'Cirkulationspumpe', 'state' : GPIO.HIGH},
+   27: {'name' : 'VVB', 'state' : GPIO.HIGH},
+   22: {'name' : 'Lampe', 'state' : GPIO.HIGH}
    }
 
 GPIO.setwarnings(False)
@@ -65,4 +65,4 @@ def action(changePin, action):
    return render_template('main.html', **templateData)
 
 if __name__ == "__main__":
-   app.run(host='0.0.0.0', port=80, debug=True)
+   app.run(host='0.0.0.0', port=8080, debug=True)

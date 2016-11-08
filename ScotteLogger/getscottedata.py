@@ -11,7 +11,7 @@ timestamp = ((int(time.time())/60)*60) # round to nearest minute
 #date = datetime.datetime.now()
 #print (date.strftime("%Y-%m-%d %H:%M"))
 
-project_path="/home/frederik/scottepi/ScotteLogger/"
+project_path="/home/scotte/scottepi/ScotteLogger/"
 rrd_db_file=project_path+"scotte.rrd"
 json_file=project_path+"scottedata.json"
 

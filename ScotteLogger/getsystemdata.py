@@ -4,7 +4,7 @@ import os
 import json
 from pprint import pprint
 
-project_path="/home/frederik/scottepi/ScotteLogger/"
+project_path="/home/scotte/scottepi/ScotteLogger/"
 json_file=project_path+"systemdata.json"
 
 def get_mem_usage():
@@ -98,7 +98,7 @@ def get_cpu_speed():
 def get_wireless_info():
     """Returns a touple with ssid and quality in %"""
     try:
-        s = subprocess.check_output(["wavemon","-iwlan1","-d"])
+        s = subprocess.check_output(["wavemon","-iwlan0","-d"])
         lines = s.split('\n') 
         ssid = lines[5].split()[1].strip("\"")
         quality_str = lines[18].split()[2]

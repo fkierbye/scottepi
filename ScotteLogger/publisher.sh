@@ -1,10 +1,10 @@
 #!/bin/bash
 
 #define scotte home dir, use absolute paths when running from cronjob
-project_path="/home/frederik/scottepi/ScotteLogger/"
+project_path="/home/scotte/scottepi/ScotteLogger/"
 
 #define dir where html and graph images should be published
-publish_path="/home/pi/software/ScotteServer/static/"
+publish_path="/home/scotte/scottepi/ScotteServer/static/"
 
 # get time and date
 ymdhm=`date +'%y-%m-%d %H:%M'`

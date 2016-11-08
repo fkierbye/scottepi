@@ -11,7 +11,7 @@ timestamp = ((int(time.time())/1800)*1800) # round to nearest half hour
 #date = datetime.datetime.now()
 #print (date.strftime("%Y-%m-%d %H:%M"))
 
-project_path="/home/frederik/scottepi/ScotteLogger/"
+project_path="/home/scotte/scottepi/ScotteLogger/"
 rrd_db_file=project_path+"vejr.rrd"
 json_file=project_path+"weatherdata.json"
 
@@ -51,8 +51,8 @@ while True:
         #convert unix timestamps to iso8601
         sunrise_unix = openweatherjsondata["sys"]["sunrise"]
         sunset_unix = openweatherjsondata["sys"]["sunset"]
-        sunrise_iso8601 = datetime.datetime.fromtimestamp(int(sunrise_unix)).strftime('%H:%M:%S')
-        sunset_iso8601 = datetime.datetime.fromtimestamp(int(sunset_unix)).strftime('%H:%M:%S')
+        sunrise_iso8601 = datetime.datetime.fromtimestamp(int(sunrise_unix)).strftime('%H:%M')
+        sunset_iso8601 = datetime.datetime.fromtimestamp(int(sunset_unix)).strftime('%H:%M')
         #sunset_iso8601 = datetime.datetime.fromtimestamp(int(sunset_unix)).strftime('%Y-%m-%d %H:%M:%S')
     
         myweatherdata['sunrise'] = str(sunrise_iso8601)
